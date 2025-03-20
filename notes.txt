@@ -1,0 +1,77 @@
+{} = for objects
+[] = for array
+
+The Problem:
+
+Right now, your code lets you click on multiple answer buttons for a single question. Each time you click, it adds the score of that button to your totalScore. This is why your percentage can go over 100% – it's adding up scores from answers you shouldn't be able to select together.
+
+The Simple Solution:
+
+We need to make sure that once you click one answer button for a question, you can't click any others for that same question.
+
+Here's how to fix it in your selectAnswer function:
+
+Keep track of whether an answer has already been selected for the current question. We can do this by setting a flag (a simple variable that's either true or false).
+
+In the selectAnswer function, check if an answer has already been selected. If it has, we do nothing when another button is clicked. If it hasn't, we process the click as usual and then mark that an answer has now been selected for this question.
+
+Here's the modified selectAnswer function:
+
+JavaScript
+
+// When a user clicks an answer
+function selectAnswer(score, selectedButton) {
+  // Check if an answer has already been selected for this question
+  const currentQuestionAnswered = answerButtons.dataset.answered === 'true';
+
+  if (!currentQuestionAnswered) {
+    // If no answer has been selected yet:
+
+    // If an option was previously selected, remove its highlight
+    if (selectedOption) {
+      selectedOption.classList.remove("selected"); // Remove highlight
+    }
+
+    // Apply new selection
+    selectedOption = selectedButton;
+    selectedOption.classList.add("selected"); // Highlight selected option
+    totalScore += score; // Add new score
+
+    // Mark that an answer has now been selected for this question
+    answerButtons.dataset.answered = 'true';
+
+    // Show "Next" button after selecting an answer
+    nextButton.style.display = "block";
+  }
+  // If an answer was already selected, do nothing when another button is clicked
+}
+And you need to reset this flag at the beginning of each new question in your showQuestion function:
+
+JavaScript
+
+function showQuestion() {
+  resetState(); //remove previous ques and ans choices before new question
+
+  // Reset the answered flag for the new question
+  answerButtons.dataset.answered = 'false';
+
+  let currentQuestion = questions[currentQuestionIndex];
+  questionText.innerText = currentQuestion.question;
+
+  currentQuestion.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    button.classList.add("btn");
+    button.onclick = () => selectAnswer(answer.score, button);
+    answerButtons.appendChild(button);
+  });
+}
+What these changes do in simple words:
+
+answerButtons.dataset.answered: We're using a special way to attach a little piece of information (like a tiny label) to the answerButtons div in your HTML. This label will tell us if an answer has been clicked for the current question.
+In selectAnswer:
+First, we check if our little label says 'true' (meaning an answer was already clicked).
+If it says 'false' (no answer clicked yet), we do everything as before (highlight the button, add the score, show the "Next" button) and then we change the label to 'true' so we know an answer has now been selected.
+If the label already says 'true', we simply do nothing when another answer button is clicked.
+In showQuestion:
+At the start of showing a new question, we reset the label on answerButtons back to 'false'. This allows the user to select one answer for the new question.

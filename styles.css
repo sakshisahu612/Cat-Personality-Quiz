@@ -1,0 +1,135 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic page styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #ffcc80, #ff9966); /* Gradient background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for modern effect */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Question text */
+#question-text {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Answer buttons */
+#answer-buttons button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    background: #ff6f00; /* Deep Orange */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#answer-buttons button:hover {
+    background: #fbbb5b; /* Lighter Orange */
+    transform: translateY(-2px);
+}
+
+/* Box around H1 */
+h1 {
+    font-size: 42px;
+    font-weight: 600;
+    background: linear-gradient(to right, #ff6600, #ffcc00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Selected answer effect */
+.selected {
+    background: #4CAF50 !important; /* Green */
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Next button */
+#next-button {
+    margin: 20px auto;
+    display: block;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    background: #FFD700; /* Gold */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#next-button:hover {
+    background: #e6c300;
+    transform: scale(1.05);
+}
+
+/* Result section */
+#result-container {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e65100; /* Deep Orange */
+}
+
+#result-container img {
+    max-width: 220px;
+    margin-top: 15px;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#result-container p {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Result button */
+#result-container button {
+    background: #ff5500;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#result-container button:hover {
+    background: #cc4400;
+    transform: scale(1.05);
+}
+
+
