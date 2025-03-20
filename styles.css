@@ -12,15 +12,17 @@ body {
 
 /* Main container */
 .container {
-    max-width: 800px;
-    margin: 80px auto;
+    width: 90%; /* Pehle fix 800px tha, ab flexible */
+    max-width: 600px; /* Max limit set kiya */
+    margin: 50px auto;
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for modern effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
+
 
 .container:hover {
     transform: scale(1.02); /* Slight zoom effect */
@@ -28,23 +30,25 @@ body {
 
 /* Question text */
 #question-text {
-    font-size: 28px;
+    font-size: 4vw; /* Responsive font size */
     font-weight: 600;
     margin-bottom: 20px;
     color: #333;
 }
 
+
 /* Answer buttons */
 #answer-buttons button {
     display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 12px 0;
+    width: 80%; /* Pehle 100% tha, ab flexible */
+    max-width: 400px;
+    padding: 12px;
+    margin: 12px auto;
     background: #ff6f00; /* Deep Orange */
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -88,17 +92,21 @@ h1 {
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 #next-button:hover {
     background: #e6c300;
     transform: scale(1.05);
 }
 
 /* Result section */
-#result-container {
-    font-size: 22px;
-    font-weight: bold;
-    color: #e65100; /* Deep Orange */
+#result-container img {
+    max-width: 100%; /* Mobile-friendly */
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 #result-container img {
     max-width: 220px;
@@ -132,4 +140,31 @@ h1 {
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) { /* Tablet */
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    #answer-buttons button {
+        font-size: 16px;
+        width: 90%;
+    }
+}
 
+@media (max-width: 480px) { /* Mobile */
+    .container {
+        margin: 30px auto;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    #question-text {
+        font-size: 20px;
+    }
+    #answer-buttons button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
