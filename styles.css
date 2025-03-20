@@ -100,20 +100,28 @@ h1 {
 }
 
 /* Result section */
-#result-container img {
-  max-width: 70%; /* Mobile-friendly */
-  height: auto;
-  margin-top: 15px;
-  border-radius: 10px;
-  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+#result-container {
+    width: 80%; /* Adjust width for better responsiveness */
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Prevent image from overflowing */
 }
 
 #result-container img {
-  max-width: 80%;
-  margin-top: 15px;
-  border-radius: 10px; /* More rounded corners */
-  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+    object-fit: contain; /* Ensures image fits inside without cropping */
 }
+
 
 #result-container p {
   margin-top: 10px;
@@ -142,67 +150,77 @@ h1 {
 
 /* 🔹 1. For Extra Small Devices (Phones, 0px - 480px) */
 @media screen and (max-width: 480px) {
-    .container {
-        max-width: 80%;  /* Use full width */
-        margin: 20px auto;
-        padding: 15px;
-    }
-    #question-text {
-        font-size: 20px;
-    }
-    #answer-buttons button {
-        font-size: 18px;
-        padding: 10px;
-    }
+  .container {
+    max-width: 70%; /* Use full width */
+    margin: 20px auto;
+    padding: 15px;
+  }
+  #question-text {
+    font-size: 20px;
+  }
+  #answer-buttons button {
+    font-size: 18px;
+    padding: 10px;
+  }
 }
 
 /* 🔹 2. For Small Devices (Tablets, 481px - 768px) */
 @media screen and (max-width: 768px) {
-    .container {
-        max-width: 80%;
-        padding: 20px;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    #question-text {
-        font-size: 24px;
-    }
-    #answer-buttons button {
-        font-size: 20px;
-        padding: 12px;
-    }
+  .container {
+    max-width: 70%;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  #question-text {
+    font-size: 24px;
+  }
+  #answer-buttons button {
+    font-size: 20px;
+    padding: 12px;
+  }
 }
 
 /* 🔹 3. For Medium Devices (Laptops, 769px - 1024px) */
 @media screen and (max-width: 1024px) {
-    .container {
-        max-width: 70%;
-        padding: 25px;
+  .container {
+    max-width: 55%;
+    padding: 25px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  #question-text {
+    font-size: 26px;
+  }
+  #result-container {
+        width: 90%; /* Make it more flexible */
+        padding: 10px;
     }
-    h1 {
-        font-size: 36px;
-    }
-    #question-text {
-        font-size: 26px;
+    
+    #result-container img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures the full image is visible */
     }
 }
 
 /* 🔹 4. For Large Devices (Desktops, 1025px and above) */
 @media screen and (min-width: 1025px) {
-    .container {
-        max-width: 60%;
-        padding: 10px;
-    }
+  .container {
+    max-width: 60%;
+    padding: 10px;
+  }
 
-    h1 {
-        font-size: 40px;
-    }
-    #question-text {
-        font-size: 35px; /* Smaller text for mobile */
-    }
-    #answer-buttons button {
-        font-size: 20px;
-        padding: 12px;
-    }
+  h1 {
+    font-size: 40px;
+  }
+  #question-text {
+    font-size: 35px; /* Smaller text for mobile */
+  }
+  #answer-buttons button {
+    font-size: 20px;
+    padding: 12px;
+  }
 }
