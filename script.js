@@ -1,146 +1,92 @@
 const questions = [
   {
-    question: "What's your super fun weekend plan?",
+    question: "Fun weekend plans?",
     answers: [
-      { text: "Sleepy time in the sunny spot!", score: 10 },
-      {
-        text: "Gotta check out every little bit of the house (maybe even outside)!",
-        score: 20,
-      },
-      { text: "Zoomies for laser dots and wiggly toys!", score: 30 },
-      { text: "Couch cuddles and belly rubs, please!", score: 40 },
+      { text: "Sleep in the sun!", score: 10 },
+      { text: "Explore everywhere!", score: 20 },
+      { text: "Chase toys!", score: 30 },
+      { text: "Cuddles!", score: 40 },
     ],
   },
   {
-    question: "What do you do when someone calls your awesome name?",
+    question: "Someone calls your name?",
     answers: [
-      { text: "Pretend I didn't hear unless there's yummy food!", score: 10 },
-      {
-        text: "Run over purring and do the leggy weave!",
-        score: 20,
-      },
-      {
-        text: 'Give a little "mew?" and maybe tilt my head like I\'m thinking.',
-        score: 30,
-      },
-      {
-        text: "Stare really hard, like I'm deciding if they're okay.",
-        score: 40,
-      },
+      { text: "Ignore (unless food)!", score: 10 },
+      { text: "Run and rub!", score: 20 },
+      { text: "Say 'mew?'", score: 30 },
+      { text: "Stare hard!", score: 40 },
     ],
   },
   {
-    question: "What's the tastiest thing in the whole wide world?",
+    question: "Tastiest thing ever?",
     answers: [
-      { text: "Fancy fishy stuff, of course!", score: 10 },
-      {
-        text: "Anything I can chase and pounce on (even if it's just a toy)!",
-        score: 20,
-      },
-      { text: "Some yummy milk or a little lick of yogurt.", score: 30 },
-      {
-        text: "Whatever my human is eating (even if they say no)!",
-        score: 40,
-      },
+      { text: "Fancy fish!", score: 10 },
+      { text: "Things to chase!", score: 20 },
+      { text: "Milk or yogurt!", score: 30 },
+      { text: "Human food!", score: 40 },
     ],
   },
   {
-    question: "When you go to a new place, what's the first thing you do?",
+    question: "New place, first thing?",
     answers: [
-      {
-        text: "Hide under something safe for a while!",
-        score: 10,
-      },
-      {
-        text: "Sniff EVERYWHERE and leave my special smells!",
-        score: 20,
-      },
-      { text: "Act like I've lived there forever!", score: 30 },
-      {
-        text: 'Find the comfiest spot and say, "Mine!"',
-        score: 40,
-      },
+      { text: "Hide!", score: 10 },
+      { text: "Sniff everything!", score: 20 },
+      { text: "Act like I live here!", score: 30 },
+      { text: "Find a comfy spot!", score: 40 },
     ],
   },
   {
-    question: "How do you show your human you like them?",
+    question: "Show you like someone?",
     answers: [
-      {
-        text: "A little blink or a lazy tail wag in their direction.",
-        score: 10,
-      },
-      {
-        text: "Lots of head boops and purrs like a tiny motor!",
-        score: 20,
-      },
-      {
-        text: 'Bringing them special "presents" (like bugs!).',
-        score: 30,
-      },
-      {
-        text: "Following them around and sitting right where they want to be!",
-        score: 40,
-      },
+      { text: "Slow blink or tail wag.", score: 10 },
+      { text: "Head boops and purrs!", score: 20 },
+      { text: "Bring 'gifts'!", score: 30 },
+      { text: "Follow them around!", score: 40 },
     ],
   },
   {
-    question: "What do you do when you're just SO bored?",
+    question: "Super bored?",
     answers: [
-      {
-        text: "Watch the outside world like it's a TV show!",
-        score: 10,
-      },
-      { text: "Make things fall off tables!", score: 20 },
-      { text: "Yell until someone gives me attention!", score: 30 },
-      { text: "Take a super long nap and dream about yummy food!", score: 40 },
+      { text: "Watch outside!", score: 10 },
+      { text: "Knock things over!", score: 20 },
+      { text: "Yell for attention!", score: 30 },
+      { text: "Take a long nap!", score: 40 },
     ],
   },
   {
-    question: "How do you feel about being picked up for a snuggle?",
+    question: "Being picked up?",
     answers: [
-      {
-        text: "Okay for a second, then put me DOWN!",
-        score: 10,
-      },
-      { text: "Yay! Cuddle time!", score: 20 },
-      {
-        text: "Depends on my mood, maybe yes, maybe NO WAY.",
-        score: 30,
-      },
-      { text: "Only if I say it's okay and I'm feeling cuddly.", score: 40 },
+      { text: "Quickly put me down!", score: 10 },
+      { text: "Yay, cuddle time!", score: 20 },
+      { text: "Maybe yes, maybe no.", score: 30 },
+      { text: "Only if I want to!", score: 40 },
     ],
   },
   {
-    question: "Where's the bestest place to take a nap?",
+    question: "Best nap spot?",
     answers: [
-      { text: "Somewhere quiet and dark, all by myself.", score: 10 },
-      { text: "Right on my human's lap or chest!", score: 20 },
-      {
-        text: "Stretched out in the middle of the floor, taking up ALL the space!",
-        score: 30,
-      },
-      { text: "In a super soft bed with cozy blankets.", score: 40 },
+      { text: "Quiet and dark place.", score: 10 },
+      { text: "On my human!", score: 20 },
+      { text: "In the middle of the floor!", score: 30 },
+      { text: "Soft bed with blankets!", score: 40 },
     ],
   },
   {
-    question: "What do you do when you meet someone new?",
+    question: "Meet someone new?",
     answers: [
-      { text: "Hiss and disappear until they're gone!", score: 10 },
-      { text: "Sneak up and sniff their shoes very carefully.", score: 20 },
-      { text: "Run right over and demand pets!", score: 30 },
-      {
-        text: "Watch them from far away and decide if they're trustworthy.",
-        score: 40,
-      },
+      { text: "Hiss and hide!", score: 10 },
+      { text: "Sniff their shoes.", score: 20 },
+      { text: "Demand pets!", score: 30 },
+      { text: "Watch from far away.", score: 40 },
     ],
   },
   {
-    question: "What's your absolute favorite toy to play with?",
+    question: "Favorite toy?",
     answers: [
-      { text: "Anything with that magical catnip stuff!", score: 10 },
-      { text: "Things that wiggle and bounce so I can chase them!", score: 20 },
-      { text: "Soft and fuzzy toys I can snuggle.", score: 30 },
-      { text: "Empty boxes and crinkly paper bags!", score: 40 },
+      { text: "Catnip toys!", score: 10 },
+      { text: "Wiggly, bouncy things!", score: 20 },
+      { text: "Soft, fuzzy toys!", score: 30 },
+      { text: "Boxes and paper bags!", score: 40 },
     ],
   },
 ];

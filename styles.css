@@ -1,170 +1,208 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 /* Basic page styling */
 body {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(to right, #ffcc80, #ff9966); /* Gradient background */
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    to right,
+    #ffcc80,
+    #ff9966
+  ); /* Gradient background */
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Main container */
 .container {
-    width: 90%; /* Pehle fix 800px tha, ab flexible */
-    max-width: 600px; /* Max limit set kiya */
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+  width: 90%; /* Pehle fix 800px tha, ab flexible */
+  max-width: 50%; /* Max limit set kiya */
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
-
 .container:hover {
-    transform: scale(1.02); /* Slight zoom effect */
+  transform: scale(1.02); /* Slight zoom effect */
 }
 
 /* Question text */
 #question-text {
-    font-size: 4vw; /* Responsive font size */
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 4vw; /* Responsive font size */
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
 }
-
 
 /* Answer buttons */
 #answer-buttons button {
-    display: block;
-    width: 80%; /* Pehle 100% tha, ab flexible */
-    max-width: 400px;
-    padding: 12px;
-    margin: 12px auto;
-    background: #ff6f00; /* Deep Orange */
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  display: block;
+  width: 80%; /* Pehle 100% tha, ab flexible */
+  max-width: 80%;
+  padding: 12px;
+  margin: 12px auto;
+  background: #ff6f00; /* Deep Orange */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #answer-buttons button:hover {
-    background: #fbbb5b; /* Lighter Orange */
-    transform: translateY(-2px);
+  background: #fbbb5b; /* Lighter Orange */
+  transform: translateY(-2px);
 }
 
 /* Box around H1 */
 h1 {
-    font-size: 42px;
-    font-weight: 600;
-    background: linear-gradient(to right, #ff6600, #ffcc00);
-    -webkit-background-clip: text;
-    color: transparent;
+  font-size: 42px;
+  font-weight: 600;
+  background: linear-gradient(to right, #ff6600, #ffcc00);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Selected answer effect */
 .selected {
-    background: #4CAF50 !important; /* Green */
-    color: white;
-    font-weight: bold;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #4caf50 !important; /* Green */
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Next button */
 #next-button {
-    margin: 20px auto;
-    display: block;
-    padding: 12px 25px;
-    font-size: 20px;
-    font-weight: 500;
-    background: #FFD700; /* Gold */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: block;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  background: #ffd700; /* Gold */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 #next-button:hover {
-    background: #e6c300;
-    transform: scale(1.05);
+  background: #e6c300;
+  transform: scale(1.05);
 }
 
 /* Result section */
 #result-container img {
-    max-width: 100%; /* Mobile-friendly */
-    height: auto;
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 70%; /* Mobile-friendly */
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
 #result-container img {
-    max-width: 220px;
-    margin-top: 15px;
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 80%;
+  margin-top: 15px;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 #result-container p {
-    margin-top: 10px;
-    font-style: italic;
-    font-size: 18px;
-    color: #444;
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 18px;
+  color: #444;
 }
 
 /* Result button */
 #result-container button {
-    background: #ff5500;
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  background: #ff5500;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #result-container button:hover {
-    background: #cc4400;
-    transform: scale(1.05);
+  background: #cc4400;
+  transform: scale(1.05);
 }
 
-@media (max-width: 768px) { /* Tablet */
+/* 🔹 1. For Extra Small Devices (Phones, 0px - 480px) */
+@media screen and (max-width: 480px) {
     .container {
-        width: 95%;
+        max-width: 80%;  /* Use full width */
+        margin: 20px auto;
         padding: 15px;
-    }
-    #answer-buttons button {
-        font-size: 16px;
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) { /* Mobile */
-    .container {
-        margin: 30px auto;
-        padding: 10px;
-    }
-    h1 {
-        font-size: 24px;
     }
     #question-text {
         font-size: 20px;
     }
     #answer-buttons button {
-        width: 100%;
-        font-size: 14px;
+        font-size: 18px;
         padding: 10px;
+    }
+}
+
+/* 🔹 2. For Small Devices (Tablets, 481px - 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 80%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    #question-text {
+        font-size: 24px;
+    }
+    #answer-buttons button {
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+
+/* 🔹 3. For Medium Devices (Laptops, 769px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 70%;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    #question-text {
+        font-size: 26px;
+    }
+}
+
+/* 🔹 4. For Large Devices (Desktops, 1025px and above) */
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 60%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    #question-text {
+        font-size: 35px; /* Smaller text for mobile */
+    }
+    #answer-buttons button {
+        font-size: 20px;
+        padding: 12px;
     }
 }
