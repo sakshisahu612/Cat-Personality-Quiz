@@ -102,7 +102,7 @@ h1 {
 /* Result section */
 #result-container {
     width: 80%; /* Adjust width for better responsiveness */
-    max-width: 500px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 15px;
     background: white;
@@ -110,6 +110,7 @@ h1 {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     overflow: hidden; /* Prevent image from overflowing */
+    position: relative;
 }
 
 #result-container img {
@@ -223,4 +224,22 @@ h1 {
     font-size: 20px;
     padding: 12px;
   }
+}
+
+/* Progress Bar Container */
+#progress-container {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Progress Bar (Moves as you answer questions) */
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #ff6f00; /* Orange */
+    transition: width 0.3s ease-in-out;
 }

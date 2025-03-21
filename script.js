@@ -161,6 +161,14 @@ function startQuiz() {
 
 startQuiz(); // Start the quiz when the page loads
 
+function updateProgressBar(){
+  const progressBar = document.getElementById("progress-bar");
+  const totalQues = questions.length;
+  const progress = ((currentQuestionIndex + 1) / totalQues) * 100;
+
+  progressBar.style.width = progress + "%";
+}
+
 function showQuestion() {
   resetState(); //remove previous ques and ans choices before new question
 
@@ -177,6 +185,8 @@ function showQuestion() {
     button.onclick = () => selectAnswer(answer.score, button);
     answerButtons.appendChild(button);
   });
+
+  updateProgressBar();
 }
 
 // when a new ques appears - hide next btn and remove prev ans
