@@ -101,28 +101,32 @@ h1 {
 
 /* Result section */
 #result-container {
-    width: 80%; /* Adjust width for better responsiveness */
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden; /* Prevent image from overflowing */
-    position: relative;
+  width: 80%; /* Adjust width for better responsiveness */
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Prevent image from overflowing */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #result-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
-    object-fit: contain; /* Ensures image fits inside without cropping */
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain; /* Ensures image fits inside without cropping */
 }
-
 
 #result-container p {
   margin-top: 10px;
@@ -196,15 +200,15 @@ h1 {
     font-size: 26px;
   }
   #result-container {
-        width: 90%; /* Make it more flexible */
-        padding: 10px;
-    }
-    
-    #result-container img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain; /* Ensures the full image is visible */
-    }
+    width: 90%; /* Make it more flexible */
+    padding: 10px;
+  }
+
+  #result-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the full image is visible */
+  }
 }
 
 /* 🔹 4. For Large Devices (Desktops, 1025px and above) */
@@ -228,18 +232,18 @@ h1 {
 
 /* Progress Bar Container */
 #progress-container {
-    width: 100%;
-    background: #ddd;
-    height: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    overflow: hidden;
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 /* Progress Bar (Moves as you answer questions) */
 #progress-bar {
-    width: 0%;
-    height: 100%;
-    background: #ff6f00; /* Orange */
-    transition: width 0.3s ease-in-out;
+  width: 0%;
+  height: 100%;
+  background: #ff6f00; /* Orange */
+  transition: width 0.3s ease-in-out;
 }
